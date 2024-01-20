@@ -1,0 +1,43 @@
+﻿@using ProcessorInfo.Models;
+
+<link rel="stylesheet" type="text/css" href="~/css/AddStyle.css">
+<div class="form-container">
+    <h4>Processor</h4>
+    <hr />
+
+    <form method="post" enctype="multipart/form-data" class="photoForm">
+        <label>Name</label>
+        <input type="text" name="Name" />
+
+        <label>Performance Cores</label>
+        <input type="number" step="0.1" name="PerformanceCores" />
+
+        <label>Efficiency Cores</label>
+        <input type="number" step="0.1" name="EfficencyCores" />
+
+        <label>Total Threads</label>
+        <input type="number" name="TotalThreads" />
+
+        <label>Max Turbo Frequency</label>
+        <input type="number" step="0.1" name="MaxTurboFrequency" />
+
+        <label>Cache</label>
+        <input type="number" step="0.1" name="Cache" />
+
+        <label>Integrated Graphics</label>
+        <input type="checkbox" name="IntegratedGraphics" />
+
+        <label>Brand Id</label>
+        <input type="number" name="BrandId" />
+
+        <label>Chipset Id</label>
+        <input type="number" name="ChipsetId" />
+
+        <label>Upload file</label>
+        <input type="file" name="photoUpload" />
+
+        <input type="submit" value="Upload" />
+    </form>
+
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,48 @@
+﻿@model ProcessorInfo.Models.Processor
+
+<h2>Update Processor</h2>
+
+<form asp-action="UpdateProcessor" method="post">
+    <input type="hidden" asp-for="ProcessorId" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Processor Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PerformanceCores" class="control-label">Performance Cores:</label>
+        <input asp-for="PerformanceCores" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EfficencyCores" class="control-label">Efficency Cores:</label>
+        <input asp-for="EfficencyCores" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TotalThreads" class="control-label">Total Threads:</label>
+        <input asp-for="TotalThreads" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaxTurboFrequency" class="control-label">Max Turbo Frequency:</label>
+        <input asp-for="MaxTurboFrequency" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cache" class="control-label">Cache:</label>
+        <input asp-for="Cache" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="IntegratedGraphics" class="form-check-input" />
+            <label asp-for="IntegratedGraphics" class="form-check-label">Integrated Graphics</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary" />
+    </div>
+</form>

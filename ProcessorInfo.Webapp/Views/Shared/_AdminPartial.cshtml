@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ProcessorInfo.Models;
+@inject SignInManager<SiteUser> SignInManager
+@inject UserManager<SiteUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(await UserManager.GetUserAsync(User), "Admin"))
+{
+<li class="nav-item">
+    <a style="color:red" class="nav-link" asp-area="" asp-controller="Home" asp-action="Users">Edit Users</a>
+</li> 
+}

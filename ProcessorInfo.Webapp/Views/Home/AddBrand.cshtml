@@ -1,0 +1,21 @@
+﻿@using ProcessorInfo.Models;
+
+<link rel="stylesheet" type="text/css" href="~/css/AddStyle.css">
+<div class="form-container">
+    <h4>Brand</h4>
+    <hr />
+
+    <form method="post" enctype="multipart/form-data" class="photoForm">
+        <label>Name</label>
+        <input type="text" name="Name" />
+
+        <label>Upload file</label>
+        <input type="file" name="photoUpload" />
+
+        <input type="submit" value="Upload" />
+    </form>
+
+    <a asp-action="BrandView">Back to List</a>
+</div>
+
+
